@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image8"
+    tools:context=".act1">
+    <Button
+        android:id="@+id/monument"
+        android:backgroundTint="@color/none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="400dp"
+        android:text="Monuments"
+        android:textColor="@color/marron"
+        android:textStyle="bold"
+        android:layout_marginStart="55dp"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/food"
+        android:backgroundTint="@color/none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="215dp"
+        android:text="Food"
+        android:textColor="@color/marron"
+        android:textStyle="bold"
+        android:layout_marginStart="75dp"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/cruises"
+        android:backgroundTint="@color/none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="215dp"
+        android:text="Cruises"
+        android:textColor="@color/marron"
+        android:textStyle="bold"
+        android:layout_marginStart="245dp"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/shopping"
+        android:backgroundTint="@color/none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="Shopping"
+        android:textColor="@color/marron"
+        android:textStyle="bold"
+        android:layout_marginStart="240dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+
+
+
+
