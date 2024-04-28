@@ -3,9 +3,12 @@ package com.example.mobile;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -14,50 +17,58 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class signup extends AppCompatActivity {
 
-    private TextInputLayout firstNameLayout, lastNameLayout, emailLayout, passwordLayout, phoneNumberLayout;
-    private Button signUpButton;
+    private AutoCompleteTextView Textname;
+    private AutoCompleteTextView Textlast;
+    private AutoCompleteTextView Textphone;
+    private AutoCompleteTextView Textmail;
+    private AutoCompleteTextView Textpassword;
+    private Button buttontnsignup;
     private DatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        signUpButton=findViewById(R.id.sign);
 
-        // Initialize views
-        firstNameLayout = findViewById(R.id.name);
-        lastNameLayout = findViewById(R.id.lastname);
-        emailLayout = findViewById(R.id.mail);
-        passwordLayout = findViewById(R.id.password);
-        phoneNumberLayout = findViewById(R.id.phone);
-        signUpButton = findViewById(R.id.sign);
-
-        // Initialize DatabaseHelper
         dbHelper = new DatabaseHelper(this);
 
-        // Set click listener for signUpButton
-        signUpButton.setOnClickListener(new View.OnClickListener() {
+        Textname=findViewById(R.id.name1);
+        Textlast=findViewById(R.id.last1);
+        Textphone=findViewById(R.id.ph1);
+        Textmail=findViewById(R.id.mail1);
+        Textpassword=findViewById(R.id.pswd1);
+        buttontnsignup=findViewById(R.id.sign);
+
+        buttontnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                // Get user input
-                String firstName = firstNameLayout.getEditText().getText().toString();
-                String lastName = lastNameLayout.getEditText().getText().toString();
-                String email = emailLayout.getEditText().getText().toString();
-                String password = passwordLayout.getEditText().getText().toString();
-                String phoneNumber = phoneNumberLayout.getEditText().getText().toString();
+            public void onClick(View view){registerUser();}
 
-                // Validate user input (optional)
-
-                // Save user data to database
-                long result = dbHelper.addUser(firstName, lastName, email, password, phoneNumber);
-                if (result != -1) {
-                    // User data saved successfully
-                    Toast.makeText(signup.this, "User registered successfully", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Failed to save user data
-                    Toast.makeText(signup.this, "Failed to register user", Toast.LENGTH_SHORT).show();
-                }
-            }
         });
+    }
+    private void registerUser(){
+        String name = Textname.getText().toString().trim();
+        String last = Textlast.getText().toString().trim();
+        String phone = Textphone.getText().toString().trim();
+        String email = Textmail.getText().toString().trim();
+        String password = Textpassword.getText().toString().trim();
+
+        SQLiteDatabase db= dbHelper.getWritableDatabase();
+        ContentValues values= new ContentValues();
+        values.put(DatabaseHelper.COLUMN_FIRST_NAME, name);
+        values.put(DatabaseHelper.COLUMN_LAST_NAME, last);
+        values.put(DatabaseHelper.COLUMN_PHONE_NUMBER, phone);
+        values.put(DatabaseHelper.COLUMN_EMAIL, email);
+        values.put(DatabaseHelper.COLUMN_PASSWORD, password);
+
+        long newRowId=db.insert(DatabaseHelper.TABLE_USERS, null, values);
+
+        if(newRowId != -1){
+            Toast.makeText(this,"User Registered Successefully!",Toast.LENGTH_SHORT).show();
+            Intent intent=new Intent(signup.this, acceuil.class);
+            startActivity(intent);
+        }
+        else {
+            Toast.makeText(this,"Failed to Register!",Toast.LENGTH_SHORT).show();
+        }
     }
 }

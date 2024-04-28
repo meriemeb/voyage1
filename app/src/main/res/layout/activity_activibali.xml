@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cruitalie"
-    tools:context=".cru1">
+    android:background="@drawable/actbali"
+    tools:context=".activib">
 
     <Button
-        android:id="@+id/previ3"
+        android:id="@+id/prevb3"
         android:layout_width="77dp"
         android:layout_height="47dp"
         android:layout_marginStart="0dp"

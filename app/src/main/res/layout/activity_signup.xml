@@ -8,9 +8,6 @@
     android:gravity="center"
     android:background="@drawable/image6"
     android:orientation="vertical">
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
 
 
@@ -23,6 +20,7 @@
         android:textColorHint="@color/white">
 
         <AutoCompleteTextView
+            android:id="@+id/name1"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_alignParentBottom="true"
@@ -42,6 +40,7 @@
         android:textColorHint="@color/white">
 
         <AutoCompleteTextView
+            android:id="@+id/last1"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_alignParentBottom="true"
@@ -61,6 +60,7 @@
         android:textColorHint="@color/white">
 
         <AutoCompleteTextView
+            android:id="@+id/ph1"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_alignParentBottom="true"
@@ -80,6 +80,7 @@
         android:textColorHint="@color/white">
 
         <AutoCompleteTextView
+            android:id="@+id/mail1"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_alignParentBottom="true"
@@ -101,6 +102,7 @@
         android:textColorHint="@color/white">
 
         <AutoCompleteTextView
+            android:id="@+id/pswd1"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_alignParentBottom="true"

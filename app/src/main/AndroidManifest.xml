@@ -13,6 +13,30 @@
         android:theme="@style/Theme.Mobile"
         tools:targetApi="31">
         <activity
+            android:name=".shop3"
+            android:exported="false" />
+        <activity
+            android:name=".activp"
+            android:exported="false" />
+        <activity
+            android:name=".food3"
+            android:exported="false" />
+        <activity
+            android:name=".monum3"
+            android:exported="false" />
+        <activity
+            android:name=".act3"
+            android:exported="false" />
+        <activity
+            android:name=".petra"
+            android:exported="false" />
+        <activity
+            android:name=".bali1"
+            android:exported="false" />
+        <activity
+            android:name=".act2"
+            android:exported="false" />
+        <activity
             android:name=".acceuil"
             android:exported="false" />
         <activity
@@ -38,6 +62,18 @@
             android:exported="false" />
         <activity
             android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".monum2"
+            android:exported="false" />
+        <activity
+            android:name=".food2"
+            android:exported="false" />
+        <activity
+            android:name=".activib"
+            android:exported="false" />
+        <activity
+            android:name=".partyb"
             android:exported="false" />
         <activity
             android:name=".start"

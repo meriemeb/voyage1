@@ -8,18 +8,6 @@
     android:background="@drawable/acceuil"
    >
 
-    <ImageButton
-        android:id="@+id/plus"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@null"
-        android:onClick="onClikMethod"
-        android:src="@drawable/plus"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="670dp"
-        />
     <Button
         android:id="@+id/italy"
         android:backgroundTint="@color/none"

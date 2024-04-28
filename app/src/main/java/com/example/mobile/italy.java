@@ -14,7 +14,7 @@ public class italy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_italy);
-        but3=findViewById(R.id.btnact);
+        but3=findViewById(R.id.btna);
         but3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

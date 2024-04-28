@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/monumentitalie"
+    android:background="@drawable/monumitalie"
     tools:context=".monum1">
-    <ImageButton
-        android:id="@+id/prev"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@null"
-        android:onClick="onClikMethod"
-        android:src="@drawable/prev"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="680dp"
-        />
+
+    <Button
+        android:id="@+id/previ1"
+        android:layout_width="77dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="@color/none"
+        android:text="prev"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

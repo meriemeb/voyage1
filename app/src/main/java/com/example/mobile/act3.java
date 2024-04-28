@@ -7,60 +7,60 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class act1 extends AppCompatActivity {
+public class act3 extends AppCompatActivity {
 
+    private Button but2;
+    private Button but3;
     private Button but4;
     private Button but5;
-    private Button but6;
-    private Button but7;
-    private Button bacc;
+    private Button but0;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_act1);
-        but4 = findViewById(R.id.monument);
+        setContentView(R.layout.activity_act3);
+        but2= findViewById(R.id.monum3);
+        but2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(act3.this, monum3.class);
+                startActivity(intent);
+
+            }
+        });
+        but3= findViewById(R.id.food3);
+        but3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(act3.this,food3.class);
+                startActivity(intent);
+
+            }
+        });
+        but4= findViewById(R.id.activity);
         but4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(act1.this, monum1.class);
+                Intent intent = new Intent(act3.this,activp.class);
                 startActivity(intent);
-
             }
         });
-        but5= findViewById(R.id.food);
+        but5= findViewById(R.id.shop3);
         but5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(act1.this,food1.class);
+                Intent intent = new Intent(act3.this,shop3.class);
                 startActivity(intent);
 
             }
         });
-        but6= findViewById(R.id.cruises);
-        but6.setOnClickListener(new View.OnClickListener() {
+        but0= findViewById(R.id.Raccp);
+        but0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(act1.this,cru1.class);
-                startActivity(intent);
-            }
-        });
-        but7= findViewById(R.id.shopping);
-        but7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(act1.this,shop2.class);
-                startActivity(intent);
-
-            }
-        });
-        bacc= findViewById(R.id.Racc);
-        bacc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(act1.this, acceuil.class);
+                Intent intent = new Intent(act3.this, acceuil.class);
                 startActivity(intent);
 
             }

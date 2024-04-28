@@ -8,18 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class monum1 extends AppCompatActivity {
-    private Button but9;
+public class partyb extends AppCompatActivity {
+    private Button bu2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_monum1);
-        but9=findViewById(R.id.previ1);
-        but9.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_party);
+        bu2=findViewById(R.id.prevb4);
+        bu2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(monum1.this,act1.class);
+                Intent intent=new Intent(partyb.this,act2.class);
                 startActivity(intent);
 
             }

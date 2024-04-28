@@ -4,7 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shppingitalie"
+    android:background="@drawable/shopitalie"
     tools:context=".shop2">
 
+    <Button
+        android:id="@+id/previ4"
+        android:layout_width="77dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="@color/none"
+        android:text="prev"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>
